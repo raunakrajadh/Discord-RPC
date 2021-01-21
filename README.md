@@ -4,6 +4,7 @@ A way of making custom rpc on Discord using Node.js
 
 <li>What are the steps to make it work?
 <li>How to configue the rpc?
+<li>The source code!!
 
 ## What are the steps to make it work?
 
@@ -28,15 +29,15 @@ npm install discord-rpc
 
 2. Configure rpc
 
-<li>Open your code editor and open 'config.json' file.
+<li>Open your code editor and open 'config.json' file and fill out the details
 
 ```json
 {
-    "botId": "Application ID",
+    "botId": "Enter your Application ID",
     "details": "Enter the detail that your want to show in your RPC",
     "state": "Enter the state of you doing something to display in your RPC",
     "largeImageKey": "Enter the name of the icon you added :-🧿-:",  //What are the step to make it work, Step-4
-    "largeImageText": "Raunak || Bot Labs"
+    "largeImageText": "Enter the text that your want to show when people point the Image of your RPC"
 }
 ```
 
@@ -44,4 +45,25 @@ npm install discord-rpc
 
 ```
 node index.js
+```
+
+## The source code
+
+```js
+const RPC = require('discord-rpc');
+const rpc = new RPC.Client({transport: 'ipc'})
+
+rpc.on('ready', () => {
+
+    rpc.setActivity({
+        details: /*Enter the detail that your want to show in your RPC*/,
+        state: /*Enter the state of you doing something to display in your RPC*/,
+        startTimestamp: new Date(),
+        largeImageKey: /*Enter the name of the icon you added :-🧿-:,  //What are the step to make it work, Step-4*/,
+        largeImageText: /*Enter the text that your want to show when people point the Image of your RPC*/,
+    })
+    console.log("Rich presence set!")
+});
+
+rpc.login({ clientId: /*Enter your Application ID*/ })
 ```
