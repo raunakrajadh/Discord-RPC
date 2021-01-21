@@ -35,7 +35,7 @@ npm install discord-rpc
     "botId": "Application ID",
     "details": "Enter the detail that your want to show in your RPC",
     "state": "Enter the state of you doing something to display in your RPC",
-    "largeImageKey": "Enter the name of the icon you added :-🧿-:",  //How to configure the bot, Step-4
+    "largeImageKey": "Enter the name of the icon you added :-🧿-:",  //What are the step to make it work, Step-4
     "largeImageText": "Raunak || Bot Labs"
 }
 ```
