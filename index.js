@@ -1,7 +1,7 @@
 const RPC = require('discord-rpc');
 const rpc = new RPC.Client({transport: 'ipc'})
 
-const config = require('./congfig.json')
+const config = require('./config.json')
 
 rpc.on('ready', () => {
 
